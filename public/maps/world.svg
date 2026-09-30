@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000" role="img">
+  <title>Ilmarren — placeholder world map</title>
+  <!--
+    PLACEHOLDER ARTWORK. Meant to be replaced.
+
+    To swap in the real map, drop the file in this folder and edit `world.art` in
+    content/world.ts (src + intrinsic width/height). Any format works: SVG, WebP,
+    PNG, JPG. Keep the aspect ratio or the hotspot coordinates in that same file
+    will need nudging.
+
+    Hotspot positions, as percentages of this box, are:
+      sablemoor  31,63      thornwake  46,45
+      highvarden 63,25      caldrift   77,71
+  -->
+  <defs>
+    <linearGradient id="parchment" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f3e9d5" />
+      <stop offset="100%" stop-color="#e6d6b5" />
+    </linearGradient>
+    <pattern id="waves" width="48" height="24" patternUnits="userSpaceOnUse">
+      <path d="M0 16 q 12 -8 24 0 t 24 0" fill="none" stroke="#7d979c" stroke-width="1.4" opacity="0.5" />
+    </pattern>
+    <g id="peak">
+      <path d="M-22 0 L0 -30 L22 0 Z" fill="#e0d0b0" stroke="#6b5a41" stroke-width="2.5" />
+      <path d="M-8 0 L0 -30 L4 -10 Z" fill="#6b5a41" opacity="0.18" />
+    </g>
+    <g id="tree">
+      <path d="M0 0 L0 -8" stroke="#6b5a41" stroke-width="2" />
+      <circle cx="0" cy="-15" r="9" fill="#dccfae" stroke="#6b5a41" stroke-width="2" />
+    </g>
+  </defs>
+
+  <!-- Sea -->
+  <rect width="1600" height="1000" fill="#9fb7bb" />
+  <rect width="1600" height="1000" fill="url(#waves)" />
+
+  <!-- Landmass -->
+  <g>
+    <path d="M180 120 C 320 60 520 80 700 110 C 880 140 1060 90 1240 130 C 1420 170 1500 260 1470 400
+             C 1440 540 1495 660 1400 790 C 1310 920 1120 905 960 912 C 800 920 640 880 500 830
+             C 360 780 236 700 200 580 C 164 460 120 300 180 120 Z"
+          fill="url(#parchment)" stroke="#4a3d2a" stroke-width="4" />
+    <path d="M180 120 C 320 60 520 80 700 110 C 880 140 1060 90 1240 130 C 1420 170 1500 260 1470 400
+             C 1440 540 1495 660 1400 790 C 1310 920 1120 905 960 912 C 800 920 640 880 500 830
+             C 360 780 236 700 200 580 C 164 460 120 300 180 120 Z"
+          fill="none" stroke="#4a3d2a" stroke-width="1.5" opacity="0.4"
+          transform="translate(0 0) scale(1.012)" transform-origin="800 500" />
+  </g>
+
+  <!-- The fen: a drowned inlet around Sablemoor -->
+  <path d="M300 760 C 380 700 430 690 470 640 C 510 592 470 560 512 540 C 556 520 580 566 562 610
+           C 544 654 520 690 540 726 C 560 762 520 800 452 806 C 384 812 320 796 300 760 Z"
+        fill="#9fb7bb" stroke="#4a3d2a" stroke-width="2.5" opacity="0.92" />
+
+  <!-- River, mountains to fen -->
+  <path d="M1000 300 C 940 380 860 400 800 470 C 740 540 660 560 600 600 C 566 622 540 616 520 596"
+        fill="none" stroke="#7d979c" stroke-width="5" stroke-linecap="round" />
+
+  <!-- Highvarden: northern mountains -->
+  <g>
+    <use href="#peak" x="940" y="268" />
+    <use href="#peak" x="1000" y="252" />
+    <use href="#peak" x="1062" y="272" />
+    <use href="#peak" x="972" y="300" />
+    <use href="#peak" x="1032" y="304" />
+  </g>
+
+  <!-- Thornwake: the briar wood -->
+  <g>
+    <use href="#tree" x="676" y="470" />
+    <use href="#tree" x="716" y="452" />
+    <use href="#tree" x="758" y="474" />
+    <use href="#tree" x="796" y="452" />
+    <use href="#tree" x="698" y="500" />
+    <use href="#tree" x="742" y="506" />
+    <use href="#tree" x="782" y="498" />
+  </g>
+
+  <!-- Caldrift: salt flats -->
+  <g stroke="#6b5a41" stroke-width="2.5" opacity="0.45" stroke-linecap="round">
+    <path d="M1150 690 h 70" />
+    <path d="M1240 676 h 96" />
+    <path d="M1174 714 h 118" />
+    <path d="M1258 730 h 74" />
+    <path d="M1192 748 h 92" />
+  </g>
+
+  <!-- Compass rose -->
+  <g transform="translate(160 866)" fill="none" stroke="#efe4cd" stroke-width="2.5">
+    <circle r="46" />
+    <circle r="30" opacity="0.6" />
+    <path d="M0 -44 L10 0 L0 44 L-10 0 Z" fill="#efe4cd" stroke="none" />
+    <path d="M-44 0 L0 -9 L44 0 L0 9 Z" fill="#efe4cd" opacity="0.55" stroke="none" />
+    <text x="0" y="-52" fill="#efe4cd" stroke="none" font-family="Georgia, serif" font-size="18"
+          text-anchor="middle">N</text>
+  </g>
+
+  <!-- Frame -->
+  <rect x="14" y="14" width="1572" height="972" fill="none" stroke="#4a3d2a" stroke-width="5" />
+  <rect x="26" y="26" width="1548" height="948" fill="none" stroke="#4a3d2a" stroke-width="1.5" opacity="0.6" />
+</svg>

@@ -39,3 +39,11 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# local working notes — plan and context copied out of ~/.claude, not part of the build
+/.notes/
+
+# project-confined credentials and tooling — NEVER commit these
+/.gcm/
+/.tools/
+.git-credentials*
